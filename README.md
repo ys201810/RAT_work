@@ -1,30 +1,68 @@
 # RAT_work
 [RAT](https://craftjarvis.github.io/RAT/)を試す。
 
-## 動かし方
-### 1. env_files/.env.workを作成
+## ドキュメント
+
+## システム構成図
+
+## 利用ツール
+
+## 環境構築の手順
+### 1. モジュールインストール
+```
+$ cd RAT_work
+$ poetry install
+```
+
+
+### 2. env_files/.env.workを作成
 以下のように記述。  
 
 ```
 OPENAI_API_KEY={your_openai_api_key}
 GOOGLE_CSE_ID={your_google_cse_id}
 GOOGLE_API_KEY={your_google_api_key}
-JAPANESE_FLG=1
-MAKE_BING_QUERY_TIMEOUT=5
-GET_BING_RESULT_TIMEOUT=3
-REVISE_ANSWER_TIMEOUT=10
+JAPANESE_FLG=1  # 日本語の場合は1、英語の場合は0
+MAKE_BING_QUERY_TIMEOUT=5  # Bing検索クエリ生成のタイムアウト
+GET_BING_RESULT_TIMEOUT=3  # Bing検索結果取得のタイムアウト
+REVISE_ANSWER_TIMEOUT=10   # 回答の修正のタイムアウト
 ```
 
-### 2. 実行
+### 3. 実行
 ```
-$ cd RAT_work
-$ poetry install
 $ cd python_file
 $ poetry run python work.py
 ```
 
-出力例
+## ディレクトリ構成
+```
+RAT_work/
+  ┣ assets/  # READMEなどに利用する画像ファイルなど
+  ┣ docs/
+  ┃  ┗ memo.md  # 詳細なメモ
+  ┣ env_file/
+  ┃  ┗ .env.work  # 環境変数
+  ┣ prompts/
+  ┃  ┣ draft.txt  # [ENGLISH]質問に対し、段階的に回答するためのドラフト作成用プロンプト
+  ┃  ┣ draft_jp.txt  # [JAPANESE]質問に対し、段階的に回答するためのドラフト作成用プロンプト
+  ┃  ┣ query.txt  # [ENGLISH]段階的な回答の正確性を検証するためのBing検索キーワード作成用プロンプト
+  ┃  ┣ query_jp.txt  # [JAPANESE]段階的な回答の正確性を検証するためのBing検索キーワード作成用プロンプト
+  ┃  ┣ revise.txt  # [ENGLISH]生成した文章の訂正用プロンプト
+  ┃  ┣ revise_jp.txt  # [JAPANESE]生成した文章の訂正用プロンプト
+  ┃  ┣ system_prompt.txt  # [ENGLISH]生成した文章の訂正用プロンプト
+  ┃  ┗ system_prompt_jp.txt  # [JAPANESE]生成した文章の訂正用プロンプト
+  ┗ python_file/
+     ┣ settings.py  # 環境変数の読み込み
+     ┗ work.py      # メイン処理
+```
 
+## 実行例
+### 入力
+```
+deep learningの発展の歴史を教えてください。
+```
+
+### 出力
 ```
 2024-04-20 22:49:08.574388 [INFO] ドラフト作成中...
 2024-04-20 22:49:21.784116 [INFO] ドラフト作成完了
@@ -109,8 +147,6 @@ Fetching pages: 100%|###########################################################
 
 このようにして、深層学習は数十年にわたる研究と開発を経て、今日では多岐にわたる領域で広く活用されている技術となっています。
 ```
-
-※ 英語での利用の場合、
 
 ## 参考
 - [RAT](https://craftjarvis.github.io/RAT/)

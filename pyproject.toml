@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "rat_work"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+notebook = "^7.1.2"
+openai = "^1.16.1"
+langchain = "^0.1.14"
+tiktoken = "^0.6.0"
+gradio = "^4.25.0"
+python-dotenv = "^1.0.1"
+google-api-python-client = "^2.126.0"
+html2text = "^2024.2.26"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
