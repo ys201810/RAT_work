@@ -1,5 +1,6 @@
 # RAT_work
-[RAT](https://craftjarvis.github.io/RAT/)を試す。
+[RAT](https://craftjarvis.github.io/RAT/)を試す。  
+[ざっくりメモ](./docs/memo.md)
 
 ## ドキュメント
 
@@ -153,5 +154,4 @@ Fetching pages: 100%|###########################################################
 ## 参考
 - [RAT](https://craftjarvis.github.io/RAT/)
 - [RATのarxivのまとめ](https://github.com/ys201810/reading_something/blob/master/memo/arxiv/LLM/RAT_Retrieval_Augmented_Thoughts_Elicit_Context-Aware_Reasoning_in_Long-Horizon_Generation.md)
-- [memo](./docs/memo.md)
 
