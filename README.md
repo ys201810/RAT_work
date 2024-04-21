@@ -1,6 +1,6 @@
 # RAT_work
 [RAT](https://craftjarvis.github.io/RAT/)を試す。  
-[ざっくりメモ](./docs/memo.md)
+ざっくりとしたメモはこれ[メモ](./docs/memo.md)
 
 ## ドキュメント
 
