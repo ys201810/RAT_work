@@ -309,7 +309,7 @@ def rat(question):
 
 
 def main():
-    question = "deep learningの発展の歴史を教えてください。"  #"Introduce Jin-Yong's Life."
+    question = "冨樫義博を説明してください。"  #"Introduce Jin-Yong's Life."
     draft, answer = rat(question)
     print(answer)
 
