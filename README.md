@@ -6,6 +6,8 @@
 ## システム構成図
 
 ## 利用ツール
+- OPENAI API
+- Google Custom Search API
 
 ## 環境構築の手順
 ### 1. モジュールインストール
